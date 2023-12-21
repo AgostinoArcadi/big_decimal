@@ -7,7 +7,7 @@ public class Main {
 
         OperazioneAritmetica sottrazione = new OperazioneAritmetica(OperazioneEnum.SOTTRAZIONE);
 
-        System.out.println(sottrazione.getTipoOperzione().getOperzione());
+        System.out.println(sottrazione.getOperazioneEnum().getOperzione());
         System.out.println("Risultato: " + sottrazione.operazione(num1, num2));
     }
 }

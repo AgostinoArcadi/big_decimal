@@ -1,24 +1,24 @@
 import java.math.*;
 
 public class OperazioneAritmetica {
-    private OperazioneEnum tipoOperzione;
+    private OperazioneEnum operazioneEnum;
 
     public OperazioneAritmetica(OperazioneEnum tipoOperzione) {
-        this.tipoOperzione = tipoOperzione;
+        this.operazioneEnum = tipoOperzione;
     }
 
-    public OperazioneEnum getTipoOperzione() {
-        return tipoOperzione;
+    public OperazioneEnum getOperazioneEnum() {
+        return operazioneEnum;
     }
 
-    public void setTipoOperzione(OperazioneEnum tipoOperzione) {
-        this.tipoOperzione = tipoOperzione;
+    public void setOperazioneEnum(OperazioneEnum operazioneEnum) {
+        this.operazioneEnum = operazioneEnum;
     }
 
     public BigDecimal operazione(BigDecimal x, BigDecimal y) {
         BigDecimal result = new BigDecimal(0);
 
-        switch (tipoOperzione) {
+        switch (operazioneEnum) {
             case ADDIZIONE:
                 result = x.add(y);
                 System.out.println(x + " + " + y);
@@ -34,6 +34,14 @@ public class OperazioneAritmetica {
             case DIVISIONE:
                 result = x.divide(y);
                 System.out.println(x + " / " + y);
+                break;
+            case MIN:
+                result = x.min(y);
+                System.out.println("Numero minore tra: " + x + " e " + y);
+                break;
+            case MAX:
+                result = x.max(y);
+                System.out.println("Numero maggiore tra: " + x + " e " + y);
                 break;
         }
         return result;

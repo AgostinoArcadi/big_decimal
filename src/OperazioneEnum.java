@@ -2,7 +2,9 @@ public enum OperazioneEnum {
     ADDIZIONE ("Addizione"),
     SOTTRAZIONE ("Sottrazione"),
     MOLTIPLICAZIONE ("Moltiplicazione"),
-    DIVISIONE ("Divisione");
+    DIVISIONE ("Divisione"),
+    MIN ("Min"),
+    MAX ("Max");
 
     private final String operzione;
 
